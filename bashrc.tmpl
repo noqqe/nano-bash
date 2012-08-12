@@ -1,0 +1,6 @@
+NANOBASHCONF="$HOME/.nano-bash/bash.conf"
+if [ -r $NANOBASHCONF ]; then
+  source $NANOBASHCONF 
+else 
+  echo "WARN: Could not find nano-bash config $NANOBASHCONF"
+fi
