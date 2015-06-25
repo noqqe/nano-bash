@@ -1,7 +1,11 @@
 # nano-bash
 
-nano-bash is my solution to distribute my bashrc to my clients and servers and 
-be version-control save. 
+nano-bash is my solution to distribute my bashrc to my clients and servers and
+be version-control save.
+
+# Warning
+
+nano-bash is suiting _my_ needs. Don't use it without reading everything.
 
 # Installation
 
