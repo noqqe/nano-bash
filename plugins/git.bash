@@ -4,11 +4,11 @@ function git_remote {
   git remote add origin $GIT_HOSTING:$1.git
 }
 
-function git_remove_missing_files() {
+function git_remove_missing_files {
   git ls-files -d -z | xargs -0 git update-index --remove
 }
 
-function git_info() {
+function git_info {
     if [ -n "$(git symbolic-ref HEAD 2> /dev/null)" ]; then
         # print informations
         echo "git repo overview"

@@ -1,4 +1,4 @@
-function wielangnoch () {
+function wielangnoch {
  if [ -z "$1" ] ; then
      echo "Usage: wielangnoch 07:30"
      return
