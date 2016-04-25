@@ -6,5 +6,6 @@ if [[ -x $gopath ]]; then
     mkdir $gohome
   fi
   export GOPATH=$gohome
+  export PATH=$PATH:$gohome/bin/
 fi
 
