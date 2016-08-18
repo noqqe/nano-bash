@@ -1,4 +1,4 @@
-gopath=$(which go)
+gopath=$(which go 2>/dev/null)
 gohome=$HOME/.go/ # thats so nice. go home. thihihi.
 
 if [[ -x $gopath ]]; then
