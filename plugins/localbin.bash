@@ -1,4 +1,6 @@
-if [[ -d ~/.bin/ ]]; then
-  export PATH=$PATH:~/.bin/
-fi
+# add local user dir as bin to PATH
 
+USERBIN="$HOME/.bin"
+if [[ -d $USERBIN ]]; then
+  export PATH="${USERBIN}:${PATH}"
+fi
