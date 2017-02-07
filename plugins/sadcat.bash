@@ -1,5 +1,5 @@
 
-SADCAT=$(which sadcat)
+SADCAT=$(which sadcat 2>/dev/null)
 
 if [[ -x $SADCAT ]]; then
   if [[ -r "${HOME}/.ssh/sadcat.toml" ]]; then
