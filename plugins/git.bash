@@ -14,7 +14,7 @@ function gcm {
 # git
 alias g='git'
 
-# Adding
+# adding
 alias ga='git add'
 alias gall='git add .'
 
@@ -28,7 +28,17 @@ function gp {
   git push origin $BRANCH
 }
 
-# Status
+# shortcut for rebase pull
+function gpur {
+  if [[ ! -z $1 ]]; then
+    BRANCH=$(git rev-parse --abbrev-ref HEAD)
+  else
+    BRANCH=$1
+  fi
+  git pull --rebase origin $BRANCH
+}
+
+# status
 alias gs='git status'
 alias gl='git log --oneline'
 alias gll='git log --graph --pretty=oneline --abbrev-commit'
