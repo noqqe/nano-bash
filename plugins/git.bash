@@ -40,6 +40,6 @@ function gpur {
 
 # status
 alias gs='git status'
-alias gl='git log --oneline'
-alias gll='git log --graph --pretty=oneline --abbrev-commit'
+alias gl='git log --oneline --decorate'
+alias gll='git log --graph --pretty=oneline --abbrev-commit --decorate'
 alias cdiff='git diff --cached'
