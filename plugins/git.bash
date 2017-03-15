@@ -20,7 +20,7 @@ alias gall='git add .'
 
 # semi intelligent pushing
 function gp {
-  if [[ ! -z $1 ]]; then
+  if [[ -z $1 ]]; then
     BRANCH=$(git rev-parse --abbrev-ref HEAD)
   else
     BRANCH=$1
@@ -30,12 +30,33 @@ function gp {
 
 # shortcut for rebase pull
 function gpur {
-  if [[ ! -z $1 ]]; then
+  if [[ -z $1 ]]; then
     BRANCH=$(git rev-parse --abbrev-ref HEAD)
   else
     BRANCH=$1
   fi
   git pull --rebase origin $BRANCH
+}
+
+# update branch from remote
+function gub {
+  if [[ -z $1 ]]; then
+    BRANCH=$(git rev-parse --abbrev-ref HEAD)
+  else
+    BRANCH=$1
+  fi
+
+  if [[ ! -z $1 ]]; then
+    git checkout $BRANCH
+  fi
+
+	git branch -u origin/$BRANCH $BRANCH && \
+  git pull origin $BRANCH --ff-only
+
+  # switch back to branch where I came from
+  if [[ ! -z $1 ]]; then
+	  git checkout -
+  fi
 }
 
 # status
