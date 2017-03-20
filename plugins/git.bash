@@ -28,6 +28,9 @@ function gp {
   git push origin $BRANCH
 }
 
+# checkout new branch with tracking
+alias gcb='git checkout -b'
+
 # shortcut for rebase pull
 function gpur {
   if [[ -z $1 ]]; then
