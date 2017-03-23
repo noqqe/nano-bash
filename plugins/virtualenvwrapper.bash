@@ -1,7 +1,9 @@
 ### Python virtualenv wrapper
 
-if [[ -x /usr/local/bin/virtualenvwrapper.sh ]]; then
+VENV=$(which virtualenvwrapper.sh 2>/dev/null)
+
+if [[ -x $VENV ]]; then
   export WORKON_HOME=~/.pyenvs
   export PROJECT_HOME=~/Code
-  source /usr/local/bin/virtualenvwrapper.sh
+  source $VENV
 fi

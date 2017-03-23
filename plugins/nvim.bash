@@ -1,3 +1,6 @@
+# I switched to neovim, but for convenience i just use vim
+# command anyways.
+
 NVIM=$(which nvim 2>/dev/null)
 
 if [[ -x $NVIM ]]; then

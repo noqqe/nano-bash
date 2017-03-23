@@ -1,3 +1,5 @@
+# If sadcat is installed make some aliases that make it 
+# easier to use. see https://github.com/noqqe/sadcat 
 
 SADCAT=$(which sadcat 2>/dev/null)
 

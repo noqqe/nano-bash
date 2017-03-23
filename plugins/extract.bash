@@ -1,3 +1,5 @@
+# Because i always forget how to unpack any given archive...
+
 extract () {
   if [[ $# -ne 1 ]]; then
     echo "Error: No file specified."

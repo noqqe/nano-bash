@@ -1,22 +1,28 @@
+# Various git functions and aliases that make my life easier. 
 
-# Useful Functions
+### Aliases 
 
-# remove missing
-function git_remove_missing_files {
-  git ls-files -d -z | xargs -0 git update-index --remove
-}
-
-# easy committing
-function gcm {
-  git commit -a -m "$*"
-}
-
-# git
 alias g='git'
 
 # adding
 alias ga='git add'
 alias gall='git add .'
+
+# checkout new branch with tracking
+alias gcb='git checkout -b'
+
+# status
+alias gs='git status'
+alias gl='git log --oneline --decorate'
+alias gll='git log --graph --pretty=oneline --abbrev-commit --decorate'
+alias cdiff='git diff --cached'
+
+### Functions
+
+# easy committing
+function gcm {
+  git commit -a -m "$*"
+}
 
 # semi intelligent pushing
 function gp {
@@ -27,9 +33,6 @@ function gp {
   fi
   git push origin $BRANCH
 }
-
-# checkout new branch with tracking
-alias gcb='git checkout -b'
 
 # shortcut for rebase pull
 function gpur {
@@ -62,8 +65,3 @@ function gub {
   fi
 }
 
-# status
-alias gs='git status'
-alias gl='git log --oneline --decorate'
-alias gll='git log --graph --pretty=oneline --abbrev-commit --decorate'
-alias cdiff='git diff --cached'
