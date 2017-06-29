@@ -22,6 +22,7 @@ copy this to your .bashrc:
        echo "WARN: Could not find nano-bash config $NANOBASHCONF"
     fi
 
-and start a new bash.
+or (be careful my friend):
 
-    $ bash
+    rm ~/.bashrc
+    ln -s ~/.nano-bash/bash.conf ~/.bashrc
