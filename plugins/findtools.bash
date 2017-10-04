@@ -18,7 +18,7 @@ function qfind () {
 
 function agvim () {
   local files=$(ag -l "$@")
-  $EDITOR $files
+  $EDITOR +/"$@" $files
 }
 
 
