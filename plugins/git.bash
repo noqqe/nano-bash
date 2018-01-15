@@ -1,6 +1,6 @@
-# Various git functions and aliases that make my life easier. 
+# Various git functions and aliases that make my life easier.
 
-### Aliases 
+### Aliases
 
 alias g='git'
 
@@ -13,7 +13,7 @@ alias gcb='git checkout -b'
 
 # status
 alias gs='git status'
-alias gl='git log --oneline --decorate'
+alias gl='git log -15 --oneline --decorate'
 alias gll='git log --graph --pretty=oneline --abbrev-commit --decorate'
 alias cdiff='git diff --cached'
 
